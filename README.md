@@ -17,7 +17,7 @@
 
 ```
 cd hujiangios
-hexo new file "filename" //建立新文章
+hexo new "filename" //建立新文章
 ```
 
 这时候会看到``hujiangios/source/_posts``文件夹下会生成一个``.md``文件和一个同名的文件夹
@@ -27,8 +27,8 @@ hexo new file "filename" //建立新文章
 ```
 title: 标题
 date: 2015-11-23 16:26:13
+categories:
 tags: 
-categories: 
 ---
 ```  
 
