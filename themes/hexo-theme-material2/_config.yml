@@ -1,0 +1,44 @@
+menu:
+  - title: 首页
+    url:
+    intro: ""
+    icon: "fa fa-home"
+  - title: 存档
+    url: archives
+    intro: ""
+    icon: "fa fa-list"
+  - title: 标签
+    url: tags
+    intro: ""
+    icon: "fa fa-list"
+  - title: iOS开发
+    url: categories/iOS开发
+    intro: ""
+    icon: "fa fa-list"
+  - title: 关于
+    url: about
+    intro: "你好"
+    icon: "fa fa-info-circle"
+
+
+links:
+  - title: "GitHub"
+    url: http://www.github.com
+    intro: "码农之家"
+    icon: "fa fa-github"
+  - title: "沪江网"
+    url: http://www.hujiang.com
+    intro: "沪江"
+    icon: "fa fa-weibo"
+
+widgets:
+- recent_posts
+- links
+
+favicon: favicon.ico
+
+rss:
+
+google_analytics:
+# baidu_analytics: 392796d51567e848aebf813b65cb8656
+footer: ""
