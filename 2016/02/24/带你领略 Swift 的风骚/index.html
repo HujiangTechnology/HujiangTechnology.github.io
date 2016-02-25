@@ -1,96 +1,135 @@
-<!DOCTYPE html>
+	<!DOCTYPE HTML>
 <html>
 <head>
+
   <meta charset="utf-8">
   
   <title>带你领略 Swift 的风骚 | 沪江移动开发</title>
+  <meta name="author" content="沪江移动开发">
+  
+  <meta name="description" content="这里能学到最新最牛的技术，帮你规划大牛之道。">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Swift，已经出来一年多了，想必不少人都曾对它抱着观望的态度，如果现在的你还是这样的态度，那么是时候去改变了。作为一个年龄比我还大的语言————Objective-C，是时候淡出历史的舞台了，有人说Objective-C和Swift会并存，但我觉得，短期内会这样，从长远的角度来看，并存的可能性并不大。毕竟，它们不是C和C++这样的关系，它们更像Delphi与C#这样的存在。从可维护的角度来说，并">
-<meta property="og:type" content="article">
-<meta property="og:title" content="带你领略 Swift 的风骚">
-<meta property="og:url" content="http://yoursite.com/2016/02/24/带你领略 Swift 的风骚/index.html">
-<meta property="og:site_name" content="沪江移动开发">
-<meta property="og:description" content="Swift，已经出来一年多了，想必不少人都曾对它抱着观望的态度，如果现在的你还是这样的态度，那么是时候去改变了。作为一个年龄比我还大的语言————Objective-C，是时候淡出历史的舞台了，有人说Objective-C和Swift会并存，但我觉得，短期内会这样，从长远的角度来看，并存的可能性并不大。毕竟，它们不是C和C++这样的关系，它们更像Delphi与C#这样的存在。从可维护的角度来说，并">
-<meta property="og:updated_time" content="2016-02-25T10:03:22.000Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="带你领略 Swift 的风骚">
-<meta name="twitter:description" content="Swift，已经出来一年多了，想必不少人都曾对它抱着观望的态度，如果现在的你还是这样的态度，那么是时候去改变了。作为一个年龄比我还大的语言————Objective-C，是时候淡出历史的舞台了，有人说Objective-C和Swift会并存，但我觉得，短期内会这样，从长远的角度来看，并存的可能性并不大。毕竟，它们不是C和C++这样的关系，它们更像Delphi与C#这样的存在。从可维护的角度来说，并">
-  
-    <link rel="alternative" href="/atom.xml" title="沪江移动开发" type="application/atom+xml">
+
+  <meta property="og:title" content="带你领略 Swift 的风骚"/>
+  <meta property="og:site_name" content="沪江移动开发"/>
+
   
   
-    <link rel="icon" href="/favicon.png">
-  
-  <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+		<!-- favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+		<link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+		<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#009688">
+		<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+		<meta name="theme-color" content="#009688">
+		<!-- favicon end -->
+    <!-- <link href="/favicon.ico" rel="icon"> -->
   
 
+  <!-- toc -->
+  <link rel="stylesheet" href="/libs/tocify/jquery.tocify.css" media="screen" type="text/css">
+
+  <!-- <link rel="stylesheet" href="/libs/bs/css/bootstrap.min.css" media="screen" type="text/css"> -->
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap/3.3.4/css/bootstrap.min.css" media="screen" type="text/css">
+
+  <!-- material design -->
+	<!-- <link rel="stylesheet" href="/libs/bs-material/css/ripples.min.css" media="screen" type="text/css"> -->
+  <link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap-material/0.3.0/css/ripples.min.css" media="screen" type="text/css">
+  <!-- <link rel="stylesheet" href="/libs/bs-material/css/material.min.css" media="screen" type="text/css"> -->
+	<link rel="stylesheet" href="//apps.bdimg.com/libs/bootstrap-material/0.3.0/css/material.min.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/highlight.light.css" media="screen" type="text/css">
+
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+
+  
+
+  
+ 
+  <script src="//apps.bdimg.com/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/libs/jquery-2.0.3.min.js" type="text/javascript"><\/script>')</script>
 </head>
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">沪江移动开发</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">沪江移动开发部技术周报</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://yoursite.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main"><article id="post-带你领略 Swift 的风骚" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2016/02/24/带你领略 Swift 的风骚/" class="article-date">
-  <time datetime="2016-02-24T08:26:13.000Z" itemprop="datePublished">2016-02-24</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/iOS开发/">iOS开发</a>
-  </div>
 
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      带你领略 Swift 的风骚
-    </h1>
-  
+ 	<body>
+	  <nav class="navbar navbar-default">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">菜单</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">沪江移动开发</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li>
+                    <a href="/" title="">
+                    <i class="fa fa-home"></i>首页
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/archives" title="">
+                    <i class="fa fa-list"></i>存档
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/tags" title="">
+                    <i class="fa fa-list"></i>标签
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/categories/iOS开发" title="">
+                    <i class="fa fa-list"></i>iOS开发
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="/about" title="你好">
+                    <i class="fa fa-info-circle"></i>关于
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+</nav>
 
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><code>Swift</code>，已经出来一年多了，想必不少人都曾对它抱着观望的态度，如果现在的你还是这样的态度，那么是时候去改变了。作为一个年龄比我还大的语言————<code>Objective-C</code>，是时候淡出历史的舞台了，有人说<code>Objective-C</code>和<code>Swift</code>会并存，但我觉得，短期内会这样，从长远的角度来看，并存的可能性并不大。毕竟，它们不是<code>C</code>和<code>C++</code>这样的关系，它们更像<code>Delphi</code>与<code>C#</code>这样的存在。从可维护的角度来说，并存的代价比较大，所以，对于<code>Objective-C</code>，放手吧。</p>
+	  <div class="container" >
+	    <div class="row">
+	
+	<div class="col-md-9 center-content">
+	
+
+		<div class="content">
+			<!-- index -->
+		   
+
+			  		<h2>带你领略 Swift 的风骚</h2>
+					
+					<div>
+						<span class="post-time">2016-02-24 16:26:13</span>
+					</div>	
+					
+
+					<div class="article-content">
+						<p><code>Swift</code>，已经出来一年多了，想必不少人都曾对它抱着观望的态度，如果现在的你还是这样的态度，那么是时候去改变了。作为一个年龄比我还大的语言————<code>Objective-C</code>，是时候淡出历史的舞台了，有人说<code>Objective-C</code>和<code>Swift</code>会并存，但我觉得，短期内会这样，从长远的角度来看，并存的可能性并不大。毕竟，它们不是<code>C</code>和<code>C++</code>这样的关系，它们更像<code>Delphi</code>与<code>C#</code>这样的存在。从可维护的角度来说，并存的代价比较大，所以，对于<code>Objective-C</code>，放手吧。</p>
 <p>作为一个绝对现代化的编程语言，Swift集合了当下众多流行语言的特性，这与保守的<code>Objective-C</code>产生了鲜明的对比。如果你还在犹豫踌躇中，那么就让本文带你领略下新欢的风骚，这一切，你值得拥有！</p>
 <h2 id="不得不说的简洁和优雅"><a href="#不得不说的简洁和优雅" class="headerlink" title="不得不说的简洁和优雅"></a>不得不说的简洁和优雅</h2><p>谈到Swift，不得不把它的优雅放在第一位，作为一门现代化的编程语言，优雅是它必备的特质，那么什么是<strong>优雅</strong>？所谓优雅就是在书写或阅读时，有种简单自然、一气呵成的感觉，不罗嗦、不做作，这是语法上的优雅，而设计中的优雅，又何尝不是这样？</p>
 <h3 id="声明和实现的合并"><a href="#声明和实现的合并" class="headerlink" title="声明和实现的合并"></a>声明和实现的合并</h3><p>这可能是Swift向现代化语言看齐的第一步，在很多传统的编程语言里，例如C++、Pascal、Objective-C，类或方法的声明与实现是分离开的。当然C++是可以在头文件里直接实现内联方法，但这很不自然，也不安全，因为它会暴露给最终用户。</p>
@@ -261,121 +300,78 @@
 <p>本篇文章中，我想要达到的目的并不仅仅是让在座各位了解到Swift的特性，更希望能让大家明白在什么场景下去使用这样的特性。所以文章中花了很大的篇幅描述使用场景和我认为的设计初衷，语法细节都是很简单的略过了，因为语法是很容易从官方文档中找到说明的，而使用场景和相应的一些思想是很难从文档上找到的。</p>
 <p>那么，本篇就到这里了，希望大家能够有所收获，<strong>一同学习，成就更好的自己</strong>！</p>
 
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://yoursite.com/2016/02/24/带你领略 Swift 的风骚/" data-id="cil24vt4y0002u02ujeq1jr4b" class="article-share-link">Share</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift/">Swift</a></li></ul>
+					</div>
 
-    </footer>
-  </div>
-  
-    
-<nav id="article-nav">
-  
-  
-    <a href="/2015/11/23/使用AutoLayout创建动态cell/" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">使用AutoLayout创建动态cell</div>
-    </a>
-  
-</nav>
+			  <!-- about -->
+			  
+		</div>
 
-  
-</article>
+		<!-- pagination -->
+	  
 
-</section>
-        
-          <aside id="sidebar">
+		<div class="comment-section">
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/iOS开发/">iOS开发</a><span class="category-list-count">2</span></li></ul>
-    </div>
-  </div>
-
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tags</h3>
-    <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/AutoLayout/">AutoLayout</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Swift/">Swift</a><span class="tag-list-count">1</span></li></ul>
-    </div>
-  </div>
-
+   <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="_posts/带你领略 Swift 的风骚.md" data-title="带你领略 Swift 的风骚" data-url="http://yoursite.com/2016/02/24/带你领略 Swift 的风骚/"></div>
+    <!-- 多说评论框 end -->
+   <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'hujiangios'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
   
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/AutoLayout/" style="font-size: 10px;">AutoLayout</a> <a href="/tags/Swift/" style="font-size: 10px;">Swift</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Archives</h3>
-    <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2016/02/">February 2016</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/11/">November 2015</a><span class="archive-list-count">1</span></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/02/24/带你领略 Swift 的风骚/">带你领略 Swift 的风骚</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/23/使用AutoLayout创建动态cell/">使用AutoLayout创建动态cell</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-        
-      </div>
-      <footer id="footer">
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016 沪江移动开发<br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-</nav>
-    
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+</div>
+	</div>
+
+	
+
+</div>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+		<footer>
+			
 
-  </div>
-</body>
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+
+<p>
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    本文总阅读量<span id="busuanzi_value_page_pv"></span>次
+</p>
+<p>
+  &copy; 2016 <a href="http://yoursite.com"> 沪江移动开发 </a>
+</p>
+<a id="gotop" href="#" title="back to top"><i class="mdi-hardware-keyboard-arrow-up"></i></a>
+
+		</footer>
+	  </div>
+
+		<!-- <script src="/libs/bs/js/bootstrap.min.js"></script> -->
+		<script src="//apps.bdimg.com/libs/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+		<script>(typeof $().modal == 'function')|| document.write('<script src="/libs/bs/js/bootstrap.min.js" type="text/javascript"><\/script>')</script>
+
+		<!-- material design -->
+		<!-- <script src="/libs/bs-material/js/ripples.min.js"></script> -->
+		<script src="//apps.bdimg.com/libs/bootstrap-material/0.3.0/js/ripples.min.js"></script>
+		<!-- <script src="/libs/bs-material/js/material.min.js"></script> -->
+		<script src="//apps.bdimg.com/libs/bootstrap-material/0.3.0/js/material.min.js"></script>
+		<!-- toc -->
+		<!-- <script src="/libs/tocify/jquery-ui.min.js"></script> -->
+		<script src="//apps.bdimg.com/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+		<script src="/libs/tocify/jquery.tocify.custom.js"></script>
+
+		<script src="/js/main.js"></script>
+
+	</body>
 </html>
