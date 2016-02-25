@@ -5,7 +5,7 @@
 
 ## 下载环境
 
-下载本仓库files分支中的所有文件，解压会得到文件夹``HujiangTechnology.github.io-files``
+克隆本仓库files分支中的所有文件，会得到文件夹``HujiangTechnology.github.io-files``
 可以把这个文件夹重新命名，名字随意,比如``hujiangios``。  
   
   下载的文件夹有一个``source``，这个文件夹下``_posts``文件夹中存放我们写的文章``.md``格式的,也就是markdown格式的文件。  
