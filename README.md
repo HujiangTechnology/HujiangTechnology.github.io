@@ -17,11 +17,22 @@
 
 ```
 cd hujiangios
-hexo new file "文章名字" //建立新文章
+hexo new file "filename" //建立新文章
 ```
 
 这时候会看到``hujiangios/source/_posts``文件夹下会生成一个``.md``文件和一个同名的文件夹
 打开``.md``文件就可以编辑文件了，同名的文件夹中放文章中所需要的图片
+
+写文章的格式  
+```
+title: 标题
+date: 2015-11-23 16:26:13
+tags: 
+categories: 
+---
+```  
+
+写完一段后添加``<--more-->``会出现主页的MORE
 
 ## 文章发布
 文章编写好就需要发布测试了
