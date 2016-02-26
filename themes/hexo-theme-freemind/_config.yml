@@ -18,7 +18,11 @@ links:
   - title: "Github"
     url: http://www.github.com
     intro: "Github"
-    icon: "fa fa-github"
+   # icon: "fa fa-github"
+  - title: "沪江"
+    url: http://www.hujiang.com
+    intro: "沪江网"
+   # icon: "favicon.png"
 
 widgets:
 - category
