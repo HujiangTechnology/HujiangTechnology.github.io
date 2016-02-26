@@ -13,10 +13,15 @@ menu:
     url: about
     intro: "About me."
     icon: "fa fa-user"
+    
+  - title: RSS
+    url: atom.xml
+    intro: "Feed"
+    icon: "fa fa"
 
 links:
   - title: "Github"
-    url: http://www.github.com
+    url: https://github.com/HujiangTechnology
     intro: "Github"
    # icon: "fa fa-github"
   - title: "沪江"
