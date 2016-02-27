@@ -1,74 +1,54 @@
-$(function() {
-  var $toc = $("#toc");
-  if (!!$toc.length && screen.width > 992 && $('.content').find('h2').length != 0) {
-    $("#toc").tocify({
-      context: '.article-content',
-      theme: 'bootstrap3',
-      selectors: 'h2,h3,h4'
+$(document).ready(function() {
+	$(window).scroll(function(){  //只要窗口滚动,就触发下面代码 
+        var scrollt = document.documentElement.scrollTop + document.body.scrollTop; //获取滚动后的高度 
+        if(scrollt>200){  //判断滚动后高度超过200px
+            $("#gotop").fadeIn(400); //淡出
+			if($(window).width() >= 1200){
+				$(".navbar").stop().fadeTo(400, 0.2);
+			}
+        }else{
+            $("#gotop").fadeOut(400); //如果返回或者没有超过,就淡入.必须加上stop()停止之前动画,否则会出现闪动
+            if($(window).width() >= 1200){
+				$(".navbar").stop().fadeTo(400, 1);
+            }
+        }
     });
-
-    //sticky the toc
-    var $window = $(window),
-      $stickyEl = $('#toc'),
-      elTop = $stickyEl.offset().top;
-    //for page refresh, we can right position the toc
-    $stickyEl.toggleClass('sticky-scroll', elTop > 155);
-
-    //listen the window scroll
-    $window.scroll(function() {
-      elTop = $stickyEl.offset().top;
-      $stickyEl.toggleClass('sticky-scroll', elTop > 155);
+    $("#gotop").click(function(){ //当点击标签的时候,使用animate在200毫秒的时间内,滚到顶部        
+		$("html,body").animate({scrollTop:"0px"},200);
     });
-
-  }
-
-	// image view
-	$('.content img').on('click',function(){
-		window.open($(this).attr('src'),'_blank');
+	$(".navbar").mouseenter(function(){
+		$(".navbar").fadeTo(100, 1);
+	});
+    $(".navbar").mouseleave(function(){
+		var scrollt = document.documentElement.scrollTop + document.body.scrollTop;
+		if (scrollt>200) {
+			$(".navbar").fadeTo(100, 0.2);
+		}
 	});
 
-  // highlight the menu
-  menuHighlight();
+	replaceMeta();
 
-  $(window).scroll(function() {
-    if ($(this).scrollTop()) {
-      $('#gotop:hidden').stop(true, true).fadeIn();
-    } else {
-      $('#gotop').stop(true, true).fadeOut();
-    }
-  });
-
-	//  enable ripple on buttons
-	$.material.ripples();
-
-  //this is adapted from http://css-tricks.com/moving-highlight/
-  function menuHighlight() {
-    var originalBG = $(".nav li").css("background-color"),
-      x, y, xy, bgWebKit, bgMoz,
-      lightColor = "rgba(1, 164, 149, 1)",
-      gradientSize = 60;
-
-    $('.nav li')
-      .mousemove(function(e) {
-        x = e.pageX - this.offsetLeft;
-        y = e.pageY - this.offsetTop;
-        xy = x + " " + y;
-
-        bgWebKit = "-webkit-gradient(radial, " + xy + ", 0, " + xy + ", " + gradientSize + ", from(" + lightColor + "), to(rgba(0, 150, 136, 1.0))), " + originalBG;
-        bgMoz = "-moz-radial-gradient(" + x + "px " + y + "px 45deg, circle, " + lightColor + " 0%, rgba(0, 150, 136, 1.0) " + gradientSize + "px)";
-
-        $(this)
-          .css({
-            background: bgWebKit
-          })
-          .css({
-            background: bgMoz
-          });
-
-      }).mouseleave(function() {
-        $(this).css({
-          background: originalBG
-        });
-      });
-  }
+	$(window).resize(function(){
+		replaceMeta();
+	});
 });
+
+replaceMeta = function(){
+	if ($(window).width() < 980) {
+		if ($("#side_meta #post_meta").length>0) {
+			$("#post_meta").appendTo("#top_meta");
+		}
+		if ($("#sidebar #site_search").length>0) {
+			$("#site_search").appendTo("#top_search");
+			$("#site_search #st-search-input").css("width", "95%");
+		}
+	} else {
+		if ($("#top_meta #post_meta").length>0) {
+			$("#post_meta").appendTo("#side_meta");
+		}
+		if ($("#top_search #site_search").length>0) {
+			$("#site_search").prependTo("#sidebar");
+			$("#site_search #st-search-input").css("width", "85%");
+		}
+	}
+}
