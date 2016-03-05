@@ -4,7 +4,7 @@ theme: flatly
 inverse: inverse
 
 menu:
-  - title: 归档
+  - title: 文章
     url: archives
     intro: "All the articles."
     icon: "fa fa-archive"
@@ -17,7 +17,7 @@ menu:
   - title: RSS
     url: atom.xml
     intro: "Feed"
-    icon: "fa fa"
+    icon: "fa fa-rss"
 
 links:
   - title: "Github"
