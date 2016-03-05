@@ -12,7 +12,7 @@ author: Yomi
 
 ## 沪江原创
 
-* Using Swift Refactor 'Today Extension'，链接待提供
+* [探索Today Extension的奥秘](http://hujiangtechnology.github.io/2016/03/01/swift-today-extension-practice/)
 * [iOS 技术标签知识范围及学习资源整理](http://hujiangtechnology.github.io/2016/02/27/tech-tags-study/)
 
 ## Swift
