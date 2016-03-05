@@ -3,6 +3,7 @@ date: 2016-2-28 20:30:00
 toc: true
 tags: iOS技术周刊
 categories: iOS开发
+author: Yomi
 ---
 
 本技术周刊旨在汇总每周的技术知识及行业动态，内容严格按照技术标签分类，望为每位iOS伙伴提供一些帮助，本篇涉及Swift，Hybrid, 性能优化等技术标签。

@@ -3,6 +3,7 @@ date: 2016-2-27 19:30:00
 toc: true
 tags: 基础
 categories: iOS开发
+author: Yomi
 ---
 
 本文旨在为每个技术标签的进阶提供一些参考，Hybrid，Swift，性能优化，设计模式，页面布局，本地数据存储，网络交互，音视频等。
