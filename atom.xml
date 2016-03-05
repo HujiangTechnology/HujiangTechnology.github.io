@@ -160,12 +160,12 @@
     <link href="http://yoursite.com/2016/02/28/ios-technology-magazine/"/>
     <id>http://yoursite.com/2016/02/28/ios-technology-magazine/</id>
     <published>2016-02-28T12:30:00.000Z</published>
-    <updated>2016-03-05T10:22:11.000Z</updated>
+    <updated>2016-03-05T12:03:08.000Z</updated>
     
     <content type="html">&lt;p&gt;本技术周刊旨在汇总每周的技术知识及行业动态，内容严格按照技术标签分类，望为每位iOS伙伴提供一些帮助，本篇涉及Swift，Hybrid, 性能优化等技术标签。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;h2 id=&quot;沪江原创&quot;&gt;&lt;a href=&quot;#沪江原创&quot; class=&quot;headerlink&quot; title=&quot;沪江原创&quot;&gt;&lt;/a&gt;沪江原创&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Using Swift Refactor ‘Today Extension’，链接待提供&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://hujiangtechnology.github.io/2016/03/01/swift-today-extension-practice/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;探索Today Extension的奥秘&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;http://hujiangtechnology.github.io/2016/02/27/tech-tags-study/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;iOS 技术标签知识范围及学习资源整理&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h2 id=&quot;Swift&quot;&gt;&lt;a href=&quot;#Swift&quot; class=&quot;headerlink&quot; title=&quot;Swift&quot;&gt;&lt;/a&gt;Swift&lt;/h2&gt;&lt;ul&gt;
