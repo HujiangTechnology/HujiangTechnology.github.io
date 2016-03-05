@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-03-05T11:34:43.000Z</updated>
+  <updated>2016-03-05T11:37:51.000Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,37 +20,33 @@
     <link href="http://yoursite.com/2016/03/01/swift-today-extension-practice/"/>
     <id>http://yoursite.com/2016/03/01/swift-today-extension-practice/</id>
     <published>2016-02-29T16:00:00.000Z</published>
-    <updated>2016-03-05T11:34:43.000Z</updated>
+    <updated>2016-03-05T11:37:51.000Z</updated>
     
     <content type="html">&lt;p&gt;本文重点介绍Today Extension的机制，并通过一个Demo讲解整个实现过程。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;p&gt;##简介&lt;/p&gt;
-&lt;ul&gt;
+&lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;extension并不是一个独立的app，它有一个包含在 app bundle 中的独立 bundle，extension 的bundle 后缀名是 .appex。其生命周期也和普通 app 不同。&lt;/li&gt;
 &lt;li&gt;extension不能单独存在，必须有一个包含它的 Containing app。&lt;/li&gt;
 &lt;li&gt;extension 需要用户手动激活  比如 Today 中的 widget 需要在 Today 中激活和关闭&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;##Today extension 的特点&lt;/p&gt;
-&lt;ul&gt;
+&lt;h2 id=&quot;Today-extension-的特点&quot;&gt;&lt;a href=&quot;#Today-extension-的特点&quot; class=&quot;headerlink&quot; title=&quot;Today extension 的特点&quot;&gt;&lt;/a&gt;Today extension 的特点&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;可以在锁屏情况下 快速查看&lt;/li&gt;
 &lt;li&gt;及时 简单直观 快速&lt;/li&gt;
 &lt;li&gt;简单交互 不可以输入 打开 Container APP&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;##生命周期&lt;br&gt;&lt;img src=&quot;swift-today-extension-practice/app_extensions_lifecycle.png&quot; alt=&quot;生命周期&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;生命周期&quot;&gt;&lt;a href=&quot;#生命周期&quot; class=&quot;headerlink&quot; title=&quot;生命周期&quot;&gt;&lt;/a&gt;生命周期&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;swift-today-extension-practice/app_extensions_lifecycle.png&quot; alt=&quot;生命周期&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;可以看到 Today 的生命周期分为3步 &lt;/p&gt;
 &lt;p&gt;######开始&lt;br&gt;在用户打开Today 点击extension时，系统就会加载extension应用，这是生命周期的开始。&lt;/p&gt;
 &lt;p&gt;######执行任务&lt;br&gt;extension启动后，开始执行它的代码。&lt;/p&gt;
 &lt;p&gt;######终止&lt;br&gt;在用户取消任务，或者任务执行结束,系统会将其杀掉。&lt;/p&gt;
-&lt;p&gt;##通讯&lt;/p&gt;
-&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;img src=&quot;swift-today-extension-practice/detailed_communication.png&quot; alt=&quot;通讯&quot;&gt;&lt;/h2&gt;&lt;ul&gt;
+&lt;h2 id=&quot;通讯&quot;&gt;&lt;a href=&quot;#通讯&quot; class=&quot;headerlink&quot; title=&quot;通讯&quot;&gt;&lt;/a&gt;通讯&lt;/h2&gt;&lt;h2 id=&quot;&quot;&gt;&lt;a href=&quot;#&quot; class=&quot;headerlink&quot; title=&quot;&quot;&gt;&lt;/a&gt;&lt;img src=&quot;swift-today-extension-practice/detailed_communication.png&quot; alt=&quot;通讯&quot;&gt;&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;extension 是属于Today的插件 它和Today的通讯是直接的&lt;/li&gt;
 &lt;li&gt;通过openURL的方式打开Container APP 当然也可打开其它的应用&lt;/li&gt;
 &lt;li&gt;通过一个公共的数据区与Container来交换数据&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;##数据共享&lt;br&gt;&lt;img src=&quot;swift-today-extension-practice/app_extensions_container_restrictions.png&quot; alt=&quot;数据共享&quot;&gt;&lt;br&gt;公共的数据区 extension 和 Container 都可以读写&lt;br&gt;其实是一个配置了相同 groupId 的 NSUserDefault&lt;/p&gt;
-&lt;p&gt;##Today 的尺寸&lt;/p&gt;
-&lt;h4 id=&quot;iOS不同设备-Today-的宽度&quot;&gt;&lt;a href=&quot;#iOS不同设备-Today-的宽度&quot; class=&quot;headerlink&quot; title=&quot;iOS不同设备 Today 的宽度&quot;&gt;&lt;/a&gt;iOS不同设备 Today 的宽度&lt;/h4&gt;&lt;p&gt;iphone4s /5/5s/6/6s 只有竖屏一种情况 &lt;/p&gt;
+&lt;h2 id=&quot;数据共享&quot;&gt;&lt;a href=&quot;#数据共享&quot; class=&quot;headerlink&quot; title=&quot;数据共享&quot;&gt;&lt;/a&gt;数据共享&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;swift-today-extension-practice/app_extensions_container_restrictions.png&quot; alt=&quot;数据共享&quot;&gt;&lt;br&gt;公共的数据区 extension 和 Container 都可以读写&lt;br&gt;其实是一个配置了相同 groupId 的 NSUserDefault&lt;/p&gt;
+&lt;h2 id=&quot;Today-的尺寸&quot;&gt;&lt;a href=&quot;#Today-的尺寸&quot; class=&quot;headerlink&quot; title=&quot;Today 的尺寸&quot;&gt;&lt;/a&gt;Today 的尺寸&lt;/h2&gt;&lt;h3 id=&quot;iOS不同设备-Today-的宽度&quot;&gt;&lt;a href=&quot;#iOS不同设备-Today-的宽度&quot; class=&quot;headerlink&quot; title=&quot;iOS不同设备 Today 的宽度&quot;&gt;&lt;/a&gt;iOS不同设备 Today 的宽度&lt;/h3&gt;&lt;p&gt;iphone4s /5/5s/6/6s 只有竖屏一种情况 &lt;/p&gt;
 &lt;table&gt;
 &lt;thead&gt;
 &lt;tr&gt;
@@ -93,7 +89,7 @@
 &lt;/tbody&gt;
 &lt;/table&gt;
 &lt;p&gt;可以看到 不同的设备 extension 的宽度是很不一样的&lt;br&gt;iPhone Plus 可以横屏&lt;br&gt;iPad 在横屏时候 分为左边和右边&lt;br&gt;iPad Pro 情况就更复杂,竖屏的时候相当于 iPad 的横屏 横屏的时候 宽度也很大&lt;br&gt;所以在设计 Extension 时候 最好用 autoLayout&lt;/p&gt;
-&lt;p&gt;#实践&lt;br&gt;下面就花10分钟来 实践写一个最简单的 extension 具体可以看 Demo.&lt;br&gt;在 Demo 里我弄了一个非常简单的 App 就只是一个UITextField 和一个button&lt;br&gt;点击 OK 按钮, 会把UITextField的文本保存到公共的 Userdefault 里面. &lt;/p&gt;
+&lt;h2 id=&quot;实践&quot;&gt;&lt;a href=&quot;#实践&quot; class=&quot;headerlink&quot; title=&quot;实践&quot;&gt;&lt;/a&gt;实践&lt;/h2&gt;&lt;p&gt;下面就花10分钟来 实践写一个最简单的 extension 具体可以看 Demo.&lt;br&gt;在 Demo 里我弄了一个非常简单的 App 就只是一个UITextField 和一个button&lt;br&gt;点击 OK 按钮, 会把UITextField的文本保存到公共的 Userdefault 里面. &lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;swift-today-extension-practice/APPMain.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;当然还开启了一个 scheme 用来让 extension 可以通过 openUrl 来打开&lt;br&gt;另外 有一个 shareData文件&lt;br&gt;代码如下:&lt;/p&gt;
@@ -115,10 +111,9 @@
 }
 &lt;/code&gt;&lt;/pre&gt;&lt;p&gt; shareData 只是用来存储公共数据 包括3个常量和2个方法:&lt;br&gt; saveShareData 用来把值存到指定 GroupId 的 NSUserDefaults 中&lt;br&gt; getShareData 从指定 GroupId 的 NSUserDefaults 中取值  &lt;/p&gt;
 &lt;p&gt;ok Container app 介绍完毕.下一步&lt;br&gt;添加一个 extension 的 Target 名称是 testEExtension&lt;/p&gt;
-&lt;p&gt;##配置证书&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;swift-today-extension-practice/配置证书.png&quot; alt=&quot;配置证书&quot;&gt;&lt;br&gt;首先得要在 iTunes Connect 里配置 证书文件的 groupId 例如: group.com.hujiang.demo&lt;br&gt;注意,必须要以 group 开头&lt;/p&gt;
-&lt;p&gt;##开启 App Group&lt;br&gt;在Xcode中 分别为container 和 extension 的Target   Target —&amp;gt; Capabilities&lt;br&gt;开启 app group 功能&lt;br&gt;开启好之后 工程里会有 两个entitlements 文件 &lt;/p&gt;
-&lt;p&gt;##修改info.Plist文件&lt;br&gt;&lt;img src=&quot;swift-today-extension-practice/plist.png&quot; alt=&quot;plist.png&quot;&gt;&lt;/p&gt;
+&lt;h2 id=&quot;配置证书&quot;&gt;&lt;a href=&quot;#配置证书&quot; class=&quot;headerlink&quot; title=&quot;配置证书&quot;&gt;&lt;/a&gt;配置证书&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;swift-today-extension-practice/配置证书.png&quot; alt=&quot;配置证书&quot;&gt;&lt;br&gt;首先得要在 iTunes Connect 里配置 证书文件的 groupId 例如: group.com.hujiang.demo&lt;br&gt;注意,必须要以 group 开头&lt;/p&gt;
+&lt;h2 id=&quot;开启-App-Group&quot;&gt;&lt;a href=&quot;#开启-App-Group&quot; class=&quot;headerlink&quot; title=&quot;开启 App Group&quot;&gt;&lt;/a&gt;开启 App Group&lt;/h2&gt;&lt;p&gt;在Xcode中 分别为container 和 extension 的Target   Target —&amp;gt; Capabilities&lt;br&gt;开启 app group 功能&lt;br&gt;开启好之后 工程里会有 两个entitlements 文件 &lt;/p&gt;
+&lt;h2 id=&quot;修改info-Plist文件&quot;&gt;&lt;a href=&quot;#修改info-Plist文件&quot; class=&quot;headerlink&quot; title=&quot;修改info.Plist文件&quot;&gt;&lt;/a&gt;修改info.Plist文件&lt;/h2&gt;&lt;p&gt;&lt;img src=&quot;swift-today-extension-practice/plist.png&quot; alt=&quot;plist.png&quot;&gt;&lt;/p&gt;
 &lt;p&gt;####先说明一下这个Plist中 NSExtension下的几个字段&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;NSExtensionAttributes 表明是那一种类型的 extension&lt;/li&gt;
@@ -138,15 +133,14 @@
 &lt;p&gt;必须把ShareData 添加到 extension的Target 里面&lt;/p&gt;
  &lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;3&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;4&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;func openAction(sender: AnyObject?) &amp;#123;&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       let url = NSURL(string: ShareData.scheme + &amp;quot;com.123&amp;quot;)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;       self.extensionContext?.openURL(url!, completionHandler: nil)&lt;/span&gt;&lt;br&gt;&lt;span class=&quot;line&quot;&gt;   &amp;#125;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;编译运行 你会得到&lt;/p&gt;
-&lt;p&gt;##一个错误&lt;br&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;testEExtension[6048:147384] *** Terminating app due to uncaught exception &amp;apos;NSInvalidArgumentException&amp;apos;, reason: &amp;apos;*** setObjectForKey: object cannot be nil (key: &amp;lt;__NSConcreteUUID 0x7f8ca0513420&amp;gt; 9DB046F6-C18B-44CC-9148-1860D9C35B8F)&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;&lt;/p&gt;
+&lt;h2 id=&quot;一个错误&quot;&gt;&lt;a href=&quot;#一个错误&quot; class=&quot;headerlink&quot; title=&quot;一个错误&quot;&gt;&lt;/a&gt;一个错误&lt;/h2&gt;&lt;figure class=&quot;highlight plain&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;testEExtension[6048:147384] *** Terminating app due to uncaught exception &amp;apos;NSInvalidArgumentException&amp;apos;, reason: &amp;apos;*** setObjectForKey: object cannot be nil (key: &amp;lt;__NSConcreteUUID 0x7f8ca0513420&amp;gt; 9DB046F6-C18B-44CC-9148-1860D9C35B8F)&amp;apos;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
 &lt;p&gt;#####这个问题只在 swift里才有, 解决方法是:&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;在extension的 build setting 的Packaging 里的Defines Module 设置为 YES.&lt;/li&gt;
 &lt;li&gt;在info.plist 的 NSExtensionPrincipalClass 前加上模块名 testEExtension.&lt;br&gt;然后编译运行 记得选中Extension 的target&lt;br&gt;最后的效果图:&lt;br&gt;&lt;img src=&quot;swift-today-extension-practice/result.png&quot; alt=&quot;最后的效果图&quot;&gt;&lt;br&gt;点击 button 也可以打开 Contaier App .结束!&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;##总结&lt;br&gt;  可以看到,做一个 extension 还是很简单的 一起动手做一个吧!&lt;/p&gt;
-&lt;p&gt;##参考资料&lt;/p&gt;
-&lt;ul&gt;
+&lt;h2 id=&quot;参考资料&quot;&gt;&lt;a href=&quot;#参考资料&quot; class=&quot;headerlink&quot; title=&quot;参考资料&quot;&gt;&lt;/a&gt;参考资料&lt;/h2&gt;&lt;ul&gt;
 &lt;li&gt;&lt;a href=&quot;https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/NotificationCenter.html#//apple_ref/doc/uid/TP40014214-CH11-SW1&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;官方文档&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;wangzz.github.io/blog/2014/06/23/wwdc2014zhi-app-extensionsxue-xi-bi-ji/&quot;&gt;App Extension编程指南 中文版&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href=&quot;onevcat.com/2014/08/notification-today-widget/&quot;&gt;WWDC2014之App Extensions学习笔记&lt;/a&gt;&lt;/li&gt;
