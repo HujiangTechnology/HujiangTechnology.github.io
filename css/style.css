@@ -153,11 +153,11 @@ li i {
 .tag_box a {
   padding: 2px 6px;
   margin: 2px;
-  background: #e5e5e5;
+  background: #eeeeee;
   color:#555;
   border-radius: 3px;
   text-decoration:none;
-  border:1px dashed #bbb;
+  /*border:1px dashed #bbb;*/
 }
 .tag_box a span{
   vertical-align:super;
@@ -340,7 +340,7 @@ header h1{
 }
 
 h1{
-  font-size:2.6em;
+  font-size:2.0em;
   line-height:1.2em;
   margin-bottom:0.6667em;
 }
@@ -411,8 +411,8 @@ h4 {
 
 .page h3.title {
   position:relative;
-  padding: 2px 5px 5px 5px;
-  font-size: 1.9em;
+  padding: 8px 5px 5px 5px;
+  font-size: 1.5em;
   font-weight: normal;
   font-family: 'PT Sans Narrow', '雅黑', '文泉驿微米黑', '黑体', sans-serif;
 }
@@ -470,22 +470,22 @@ h4 {
   list-style:circle;
   line-height: 1em;
   margin-bottom: 0px;
-  padding: 10px 20px;
+  padding: 0px 15px;
 }
 
 .toc-article li{
   margin-left:5px !important;
-  padding:0 !important  
+  padding: 3px !important  
 }
 
 .toc-article ol{
   list-style:square;
-  padding: 5px 20px;
+  padding: 5px 10px;
 }
 
 .toc-article ol ol{
   list-style:circle;
-  padding: 5px 20px;
+  padding: 5px 10px;
 }
 
 /* =============================================================================
