@@ -74,7 +74,7 @@
     <link href="http://yoursite.com/2016/03/06/using-raml-build-api-doc/"/>
     <id>http://yoursite.com/2016/03/06/using-raml-build-api-doc/</id>
     <published>2016-03-05T16:00:00.000Z</published>
-    <updated>2016-03-06T13:43:42.000Z</updated>
+    <updated>2016-03-06T13:47:17.000Z</updated>
     
     <content type="html">&lt;p&gt;App开发人员应当了解的一些API知识，熟悉编写API文档的一些工具和方法。&lt;/p&gt;
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
@@ -133,7 +133,7 @@
     
     </summary>
     
-      <category term="iOS开发" scheme="http://yoursite.com/categories/iOS%E5%BC%80%E5%8F%91/"/>
+      <category term="API" scheme="http://yoursite.com/categories/API/"/>
     
     
       <category term="基础" scheme="http://yoursite.com/tags/%E5%9F%BA%E7%A1%80/"/>
