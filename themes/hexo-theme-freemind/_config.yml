@@ -4,7 +4,12 @@ theme: flatly
 inverse: inverse
 
 menu:
-  - title: 文章
+  - title: 周刊
+    url: "tags/iOS技术周刊/"
+    intro: "技术周刊"
+    icon: "fa fa-apple"
+
+  - title: 归档
     url: archives
     intro: "All the articles."
     icon: "fa fa-archive"
