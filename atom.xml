@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>沪江移动开发</title>
-  <subtitle>学习，成为更好的自己</subtitle>
+  <title>移动开发</title>
+  <subtitle>Stay hungry. Stay foolish.</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
@@ -9,7 +9,7 @@
   <id>http://yoursite.com/</id>
   
   <author>
-    <name>沪江移动开发</name>
+    <name>移动开发</name>
     
   </author>
   
